@@ -13,7 +13,7 @@ class Quizzler extends StatelessWidget {
         backgroundColor: Colors.grey.shade900,
         body: SafeArea(
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 10.0),
+            padding: const EdgeInsets.symmetric(horizontal: 10.0),
             child: QuizPage(),
           ),
         ),
@@ -34,9 +34,9 @@ class _QuizPageState extends State<QuizPage> {
     bool correctAnswer = quizBrain.getCorrectAnswer();
     setState(() {
     if (userPickedAnswer == correctAnswer) {
-      scoreKeeper.add(Icon(Icons.check, color: Colors.green,));
+      scoreKeeper.add(const Icon(Icons.check, color: Colors.green,));
     } else {
-      scoreKeeper.add(Icon(Icons.close, color: Colors.red,));
+      scoreKeeper.add(const Icon(Icons.close, color: Colors.red,));
     }
 
     
@@ -53,12 +53,12 @@ class _QuizPageState extends State<QuizPage> {
         Expanded(
           flex: 5,
           child: Padding(
-            padding: EdgeInsets.all(10.0),
+            padding: const EdgeInsets.all(10.0),
             child: Center(
               child: Text(
                 quizBrain.getQuestionText(),
                 textAlign: TextAlign.center,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 25.0,
                   color: Colors.white,
                 ),
@@ -68,11 +68,11 @@ class _QuizPageState extends State<QuizPage> {
         ),
         Expanded(
           child: Padding(
-            padding: EdgeInsets.all(15.0),
+            padding: const EdgeInsets.all(15.0),
             child: TextButton(
               // textColor: Colors.white,
               // color: Colors.green,
-              child: Text(
+              child: const Text(
                 'True',
                 style: TextStyle(
                   color: Colors.white,
@@ -89,10 +89,10 @@ class _QuizPageState extends State<QuizPage> {
         ),
         Expanded(
           child: Padding(
-            padding: EdgeInsets.all(15.0),
+            padding: const EdgeInsets.all(15.0),
             child: TextButton(
               // color: Colors.red,
-              child: Text(
+              child: const Text(
                 'False',
                 style: TextStyle(
                   fontSize: 20.0,
